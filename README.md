@@ -11,7 +11,7 @@
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd Portfolio/
+    cd portfolio/
     npm i
     npm run dev
     ```

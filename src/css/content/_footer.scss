@@ -1,0 +1,19 @@
+.footer {
+    &__base {
+        padding: 10% 5% 2%;
+        background-color: $c-background-dark;
+    }
+    &__text {
+        @include font($f-p);
+        color: $c-text-light;
+        text-align: center;
+    }
+
+    &__list {
+        fab {
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+    }
+}

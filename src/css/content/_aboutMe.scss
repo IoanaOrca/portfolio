@@ -1,0 +1,40 @@
+.about {
+    &__base {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 32px 16px;
+
+        @include susy-breakpoint($bp-tablet) {
+            padding: 80px;
+        }
+    }
+
+    &__image,
+    &__content {
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+
+    &__image {
+        @include susy-breakpoint($bp-tablet) {
+            max-width: 40%;
+        }
+    }
+
+    &__content {
+        @include susy-breakpoint($bp-tablet) {
+            max-width: 60%;
+        }
+    }
+
+
+    &__title {
+        @include font($f-h2);
+    }
+
+    &__text {
+        @include font($f-p);
+    }
+}

@@ -1,5 +1,21 @@
+@charset "UTF-8";
+
 @import "vendor/normalize.css";
 @import "vendor/main.css";
 @import "vendor/font.css";
 
-@import "io";
+@import "colors";
+@import "breakpoints";
+@import "texts";
+@import "susy";
+@import "mixin_font";
+@import "utility_classes";
+
+@import "content/navigation";
+@import "content/hero";
+@import "content/aboutMe";
+@import "content/quotes";
+@import "content/work";
+@import "content/resume";
+@import "content/contact";
+@import "content/footer";

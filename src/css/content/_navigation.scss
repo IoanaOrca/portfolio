@@ -1,0 +1,11 @@
+.nav-list {
+    li {
+        display: inline; 
+
+        a {
+            color: red;
+            text-decoration: none;
+            user-select: none;
+        }
+    }
+}

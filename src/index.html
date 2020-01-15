@@ -3,12 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Portofolio - Ioana Orca</title>
+    <title>Ioana Orca - Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/index.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#008080">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -19,10 +27,10 @@
 
     <!-- Header -->
 
-    <header id="header">
-        <img alt="logo" src="assets/logo.jpg">
+    <header class="navbar__base container">
+        <img alt="navbar__logo" src="assets/logoBlack.svg" width='36'>
         <nav>
-            <ul class="nav-list">
+            <ul class="navbar__links">
                 <li>
                     <a href="#intro">Intro</a>
                 </li>
@@ -43,47 +51,111 @@
     </header>
 
     <main>
-        <section id="intro">
-            <h1>Serendipity - fortunate hapenstance</h1>
+        <section id="intro" class="hero__base">
+            <div class="hero__content container">
+                <h1 class="hero__title">Serendipity</h1>
+                <h2 class="hero__subtitle"> (n) fortunate hapenstance</h2>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>Hey there!</h2>
+        <section id="about" class="about__base container">
+            <img class="about__image" src="assets/me.jpeg" alt="me">
+            <div class="about__content">
+                <h2 class="about__title">Hey there! &#9996;</h2>
+                <p class="about__text">Nice to meet you! I’m Ioana,  a creative programmer with divergent ideas and connective visions. I am passionate about web development,  exploring new limits and always strive to enhance emotional intelligence in me and other people.</p>
+                <hr>
+                <p class="about__text">Currently I am accepting new projects to challenge my knowledge so go ahead…<b>GET IN TOUCH!</b></p>                
+            </div>
         </section>
 
-        <section>
-            <h3>“The road to success is always under construction”</h3>
+        <section class="quote__base" style="background-image: url('assets/pink.jpeg')">
+            <h3 class="quote__message">“The road to success is always under construction”</h3>
+            <h3 class="quote__author">Lily Tomlin</h3>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Codepen</li>
-                <li>Float game</li>
-                <li>Swapter</li>
+        <section id="work" class="work__base container">
+            <h2 class="work__title">Projects</h2>
+            <ul class="work__list">
+                <li class="worklist__item">
+                    <a href="https://codepen.io/collection/nbgPPp/" class="worklist__link"><i class="worklist__icon fab fa-free-code-camp fa-fw"></i></a> 
+                    <h3 class="worklist__title">Codepen</h3>
+                    <p class="worklist__text">Basic and advanced front-end projects. Technologies :HTML5, CSS3, JavaScript</p> 
+                    </li>
+                <li class="worklist__item">
+                    <a href="https://ioanaorca.github.io/FloatGame/" class="worklist__link"><i class="worklist__icon fab fa-github fa-fw"></i></a> 
+                    <h3 class="worklist__title">Float game</h3>
+                    <p class="worklist__text">My first front-end game. Can you float?</p>
+                    </li>
+                <li class="worklist__item">
+                    <a href="https://swapster.herokuapp.com/" class="worklist__link"><i class="worklist__icon fas fa-code fa-fw"></i></a>
+                    <h3 class="worklist__title">Swapster</h3>
+                    <p class="worklist__text">Final Ironhack bootcamp project – 6 days. Technologies: TypeScript, AngularJS, Git, NodeJS</p> 
+                </li>
             </ul>
         </section>
 
-        <section id="resume">
-            <h3>“Wherever you go, go with all your heart.” – Confucius</h3>
+        <section id="resume" class="resume__base">
+            <h3 class="quote__message">“Wherever you go, go with all your heart.” - Confucius</h3>
+            <a href="assets/Ioanas-Resume.pdf " target="_blank" class="resume__download"> Resume</a>
         </section>
 
-        <section>
-            <h3>“Life begins at the end of your comfort zone”</h3>
+        <section class="quote__base" style="background-image: url('assets/sky.jpeg')">
+            <h3 class="quote__message" >“Life begins at the end of your comfort zone”</h3>
+            <h3 class="quote__author">Neale Donald Walsch</h3>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Please get in touch, for sure it will be a positive experience!</p>
-            <form></form>
+        <section id="contact" class="contact__base container">
+            <h2 class="contact__title">Contact</h2>
+            <p CLASS="contact__subtitle">Please get in touch, for sure it will be a positive experience!</p>
+            <form action="https://formspree.io/mvokagnl" method="POST" class="form">
+                <div class="form__input">
+                    <div class="u-w--half form__info">
+                        <input class="form__email u-w--full" type="text" name="_replyto" placeholder="Your email here">
+                        <input class="form__name u-w--full" type="text" name="name" placeholder="Your name here">
+                    </div>
+                    <div class="form__message u-w--half">
+                        <textarea class="form__textarea" name="message" placeholder="Message:"></textarea>
+                    </div>
+                </div>
+                <input type="text" name="_gotcha" style="display: none" />
+                <button class="form__submit" type="submit">Send</button>
+            </form>
         </section>
     </main>
 
-    <section id="footer">
-
+    <section id="footer" class="footer__base">
+        <ul class="footer__list">
+            <li class="footer__link">
+                <a href="https://www.facebook.com/ioana.orka" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="footer__link">
+                <a href="https://www.instagram.com/?hl=en" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="footer__link">
+                <a href="https://www.linkedin.com/feed/" title="Linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="footer__link">
+                <a href="https://github.com/IoanaOrca" title="Github" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="footer__link">
+                <a href="https://codepen.io/IoanaOrka/" title="Codepen" target="_blank">
+                    <i class="fab fa-codepen"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="footer__text">Made with ❤️ by IoanaOrca</p>
     </section>
 
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 
 </body>
 

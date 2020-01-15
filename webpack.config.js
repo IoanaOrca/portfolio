@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const config = {
@@ -14,9 +15,11 @@ const config = {
         filename: 'js/[name].js',
     },
     devServer: {
-        contentBase: './src',
+        contentBase: path.join(__dirname, 'build'),
         compress: true,
         port: 7070,
+        https: true,
+        http2: true,
     },
     module: {
         rules: [
@@ -29,7 +32,7 @@ const config = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader', {
+                    use: ['css-loader?-url', {
                         loader: 'postcss-loader',
                         options: {
                             plugins: [autoprefixer],
@@ -38,11 +41,30 @@ const config = {
                     'sass-loader'],
                     fallback: 'style-loader',
                 }),
-            }
+            },
+            // {
+            //     test: /\.(png|jpe?g|gif)$/i,
+            //     use: [
+            //       {
+            //         loader: 'file-loader',
+            //       },
+            //     ],
+            // },
         ],
     },
     plugins: [
         new ExtractTextPlugin("css/index.css"),
+        new CopyPlugin([
+            {
+                from: 'src/assets',
+                to: 'assets/[path][name].[ext]',
+                cache: true,
+            },
+            {
+                from: 'src/*.html',
+                to: '[name].[ext]',
+            },
+          ]),
       ],
     watchOptions: {
         ignored: /node_modules/,

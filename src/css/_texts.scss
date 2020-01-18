@@ -67,6 +67,10 @@ $f-hero-title: (
         text-align: right,
         letter-spacing: -0.5px,
         line-height: 78px,
+    ),
+    $bp-large-desktop: (
+        font-size: 92px,
+        line-height: 94px,
     )
 );
 
@@ -84,6 +88,10 @@ $f-hero-subtitle: (
         text-align: right,
         letter-spacing: -0.2px,
         line-height: 32px,
+    ),
+    $bp-large-desktop: (
+        font-size: 42px,
+        line-height: 44px,
     )
 );
 

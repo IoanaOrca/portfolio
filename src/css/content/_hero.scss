@@ -25,6 +25,10 @@
         @include susy-breakpoint($bp-desktop) {
             padding: 10px 80px;
         }
+
+        @include susy-breakpoint($bp-large-desktop) {
+            padding: 10px 20px;
+        }
     }
 
     &__subtitle {

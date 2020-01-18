@@ -1,6 +1,6 @@
 .footer {
     &__base {
-        padding: 10% 5% 2%;
+        padding: 7% 5% 2%;
         background-color: $c-background-dark;
     }
     &__text {
@@ -10,9 +10,16 @@
     }
 
     &__list {
-        fab {
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__link {
+        padding: 10px;
+
+        &content{
             color: white;
         }
     }

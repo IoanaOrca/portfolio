@@ -1,4 +1,9 @@
-.nav-list {
+.navbar {
+
+    &__list {
+        list-style-type: none;
+    }
+
     li {
         display: inline; 
 

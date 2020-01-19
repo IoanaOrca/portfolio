@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Ioana Orca - Portfolio</title>
-    <meta name="description" content="">
+    <meta name="description" content="Ioana Orca - fun front-end developer.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/index.css">
@@ -21,24 +21,16 @@
 </head>
 
 <body>
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-    <!-- Header -->
-
-    <!-- <header class="navbar__base container">
-        <img alt="navbar__logo" src="assets/logoBlack.svg" width='36'>
-        <nav>
+    <!-- <header class="navbar__base">
+        <div class="navbar__container container">
+            <img class="navbar__logo" alt="navbar__logo" src="assets/logoBlack.svg" width='36'>
+        <nav class="navbar__menu">
             <ul class="navbar__list">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#intro">Intro</a>
-                </li>
                 <li class="navbar__item">
                     <a class="navbar__link" href="#about">Who I am</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="#projects">What I do</a>
+                    <a class="navbar__link" href="#work">What I do</a>
                 </li>
                 <li class="navbar__item">
                     <a class="navbar__link" href="#resume">Resume</a>
@@ -49,10 +41,11 @@
             </ul>
             <a href="#" id="toggle" class="navbar-toggle toggle" data-toggle="collapse" data-target="#navbarCollapse"><span></span></a>
         </nav>
+        </div>
     </header> -->
 
     <main>
-        <section id="intro" class="hero__base">
+        <section class="hero__base">
             <div class="hero__content container">
                 <h1 class="hero__title">Serendipity</h1>
                 <h2 class="hero__subtitle"> (n) fortunate hapenstance</h2>
@@ -62,7 +55,7 @@
         <section id="about" class="about__base container">
             <img class="about__image" src="assets/me.jpeg" alt="me">
             <div class="about__content">
-                <h2 class="about__title">Hey there! &#9996;</h2>
+                <h2 class="about__title">Hey there! ✌️</h2>
                 <p class="about__text">Nice to meet you! I’m Ioana,  a creative programmer with divergent ideas and connective visions. I am passionate about web development,  exploring new limits and always strive to enhance emotional intelligence in me and other people.</p>
                 <hr>
                 <p class="about__text">Currently I am accepting new projects to challenge my knowledge so go ahead…<b>GET IN TOUCH!</b></p>                
@@ -78,17 +71,17 @@
             <h2 class="work__title">Projects</h2>
             <ul class="work__list">
                 <li class="worklist__item">
-                    <a href="https://codepen.io/collection/nbgPPp/" class="worklist__link"><i class="worklist__icon fab fa-free-code-camp fa-fw"></i></a> 
+                    <a href="https://codepen.io/collection/nbgPPp/" class="worklist__link" title="codepen projects"><i class="fab fa-free-code-camp fa-fw fa-3x"></i></a> 
                     <h3 class="worklist__title">Codepen</h3>
                     <p class="worklist__text">Basic and advanced front-end projects. Technologies :HTML5, CSS3, JavaScript</p> 
                     </li>
                 <li class="worklist__item">
-                    <a href="https://ioanaorca.github.io/FloatGame/" class="worklist__link"><i class="worklist__icon fab fa-github fa-fw"></i></a> 
+                    <a href="https://ioanaorca.github.io/FloatGame/" class="worklist__link" title="float game"><i class="fab fa-github fa-fw fa-3x"></i></a> 
                     <h3 class="worklist__title">Float game</h3>
                     <p class="worklist__text">My first front-end game. Can you float?</p>
                     </li>
                 <li class="worklist__item">
-                    <a href="https://swapster.herokuapp.com/" class="worklist__link"><i class="worklist__icon fas fa-code fa-fw"></i></a>
+                    <a href="https://swapster.herokuapp.com/" class="worklist__link" title="swapster app"><i class="fas fa-code fa-fw fa-3x"></i></a>
                     <h3 class="worklist__title">Swapster</h3>
                     <p class="worklist__text">Final Ironhack bootcamp project – 6 days. Technologies: TypeScript, AngularJS, Git, NodeJS</p> 
                 </li>
@@ -111,11 +104,11 @@
             <form action="https://formspree.io/mvokagnl" method="POST" class="form">
                 <div class="form__input">
                     <div class="u-w--half form__info">
-                        <input class="form__email u-w--full" type="text" name="_replyto" placeholder="Your email here">
-                        <input class="form__name u-w--full" type="text" name="name" placeholder="Your name here">
+                        <input class="form__email u-w--full" type="text" name="_replyto" title="your email" placeholder="Your email">
+                        <input class="form__name u-w--full" type="text" name="name" title="your name" placeholder="Your name">
                     </div>
                     <div class="form__message u-w--half">
-                        <textarea class="form__textarea" name="message" placeholder="Message:"></textarea>
+                        <textarea class="form__textarea" name="message" title="your message" placeholder="Message"></textarea>
                     </div>
                 </div>
                 <input type="text" name="_gotcha" style="display: none" />
@@ -124,36 +117,36 @@
         </section>
     </main>
 
-    <section id="footer" class="footer__base">
+    <footer id="footer" class="footer__base">
         <ul class="footer__list">
-            <li class="footer__link">
-                <a class="footer__linkcontent" href="https://www.facebook.com/ioana.orka" title="Facebook" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
+            <li class="footer__item">
+                <a class="footer__link" href="https://www.facebook.com/ioana.orka" title="Facebook" target="_blank" rel=”noopener” >
+                    <i class="fab fa-facebook-f fa-fw fa-lg"></i>
                 </a>
             </li>
-            <li class="footer__link">
-                <a class="footer__linkcontent" href="https://www.instagram.com/?hl=en" title="Instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
+            <li class="footer__item">
+                <a class="footer__link" href="https://www.instagram.com/?hl=en" title="Instagram" target="_blank" rel=”noopener” >
+                    <i class="fab fa-instagram fa-fw fa-lg"></i>
                 </a>
             </li>
-            <li class="footer__link">
-                <a class="footer__linkcontent" href="https://www.linkedin.com/feed/" title="Linkedin" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+            <li class="footer__item">
+                <a class="footer__link" href="https://www.linkedin.com/feed/" title="Linkedin" target="_blank" rel=”noopener” >
+                    <i class="fab fa-linkedin-in fa-fw fa-lg"></i>
                 </a>
             </li>
-            <li class="footer__link">
-                <a class="footer__linkcontent" href="https://github.com/IoanaOrca" title="Github" target="_blank">
-                    <i class="fab fa-github"></i>
+            <li class="footer__item">
+                <a class="footer__link" href="https://github.com/IoanaOrca" title="Github" target="_blank" rel=”noopener” >
+                    <i class="fab fa-github fa-fw fa-lg"></i>
                 </a>
             </li>
-            <li class="footer__link">
-                <a class="footer__linkcontent" href="https://codepen.io/IoanaOrka/" title="Codepen" target="_blank">
-                    <i class="fab fa-codepen"></i>
+            <li class="footer__item">
+                <a class="footer__link" href="https://codepen.io/IoanaOrka/" title="Codepen" target="_blank" rel=”noopener” >
+                    <i class="fab fa-codepen fa-fw fa-lg"></i>
                 </a>
             </li>
         </ul>
         <p class="footer__text">Made with ❤️ by IoanaOrca</p>
-    </section>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>

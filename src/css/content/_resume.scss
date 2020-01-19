@@ -21,11 +21,13 @@
         border-radius: 5px;
         color: $c-hero-yellow;
         text-decoration: none;
-        transition: background-color .5s ease-in, color .5s ease-in;
+        transition: background-color $transition, color $transition;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $c-hero-yellow;
             color: $c-text-dark;
+            outline: 0;
         }
     }
 }

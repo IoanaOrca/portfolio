@@ -1,16 +1,40 @@
 .navbar {
 
+    &__base {
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        & + main {
+            padding-top: 55px;
+        }
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__logo {
+        padding: 4px;
+    }
+
+    &__menu {
+        margin-left: auto;
+    }
+
     &__list {
+        padding-left: 0;
         list-style-type: none;
     }
 
-    li {
+    &__item {
         display: inline; 
+        padding: 4px 10px;
+    }
 
-        a {
-            color: red;
-            text-decoration: none;
-            user-select: none;
-        }
+    &__link {
+        @include font($f-p);
+
+        text-decoration: none;
     }
 }

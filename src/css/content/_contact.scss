@@ -34,7 +34,8 @@
                 
 
                 &:focus {
-                    outline: none;
+                    box-shadow: 0 0 0 3px rgba($c-background-dark, .3);
+                    outline: 0;
                 }
             }
     
@@ -46,7 +47,7 @@
             &__submit {
                 cursor: pointer;
                 text-align: center;
-                transition: background-color .5s ease-in, color .5s ease-in;
+                transition: background-color $transition, color $transition;
 
                 &:hover {
                     background-color: $c-text-dark;

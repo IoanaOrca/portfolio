@@ -61,8 +61,17 @@ const config = {
                 cache: true,
             },
             {
+                from: 'src/assets/favicons/favicon.ico',
+                to: '[name].[ext]',
+                cache: true,
+            },
+            {
                 from: 'src/*.html',
                 to: '[name].[ext]',
+            },
+            {
+                from: 'CNAME',
+                to: '[name]',
             },
           ]),
       ],

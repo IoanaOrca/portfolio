@@ -17,4 +17,3 @@ jobs:
         access-token: ${{ secrets.ACCESS_TOKEN }}
         source-directory: build
         build-command: npm run build
-        custom-domain: www.ioanaorca.com

@@ -28,3 +28,7 @@ $bp-large-desktop-only: $bp-large-desktop;
 
 // Combined
 $bp-mobile-tablet: $bp-mobile-min $bp-tablet-max;
+
+:root {
+    --bp-tablet: #{$bp-tablet};
+}

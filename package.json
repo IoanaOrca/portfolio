@@ -17,7 +17,7 @@
     "eslint-plugin-import": "^2.19.1",
     "rimraf": "^3.0.0",
     "sass": "^1.57.1",
-    "stylelint": "^12.0.1",
+    "stylelint": "^14.16.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-scss": "^3.13.0",
     "vite": "^4.0.3"

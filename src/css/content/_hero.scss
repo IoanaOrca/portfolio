@@ -1,7 +1,7 @@
 .hero {
     &__base {
         min-height: 50vh;
-        background: url("../assets/heroImage.jpg") no-repeat center center fixed;
+        background: url("/assets/heroImage.jpg") no-repeat center center fixed;
         background-size: cover;
 
         @include susy-breakpoint($bp-tablet) {

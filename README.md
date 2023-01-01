@@ -15,7 +15,3 @@
     npm i
     npm run dev
     ```
-
-3.  **Running!**
-
-    Your site is now running at `http://localhost:7070`!

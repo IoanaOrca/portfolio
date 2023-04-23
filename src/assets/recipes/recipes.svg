@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="gradient-0" x1="200" x2="200" y1="0" y2="400" gradientTransform="matrix(-1 -.04 0 -1 399.86 407.43)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8e9eab"/>
+      <stop offset="1" stop-color="#eef2f3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#gradient-0)"/>
+  <path fill="#E1E8ED" d="M300 200.1c0 55.16-44.72 99.88-99.87 99.88-55.16 0-99.88-44.72-99.88-99.88 0-55.15 44.72-99.87 99.88-99.87 55.15 0 99.87 44.72 99.87 99.87Z"/>
+  <path fill="#CCD6DD" d="M266.71 200.1a66.57 66.57 0 0 1-66.58 66.59 66.56 66.56 0 0 1-66.59-66.59 66.57 66.57 0 0 1 66.59-66.58 66.58 66.58 0 0 1 66.58 66.58Z"/>
+  <path fill="#E1E8ED" d="M261.16 200.1a61.04 61.04 0 1 1-122.07 0 61.04 61.04 0 0 1 122.07 0Z"/>
+  <g fill="#99AAB5" transform="matrix(5.55 0 0 5.55 100.23 100.25)">
+    <circle cx="1" cy="1" r="1"/>
+    <path d="M0 1h2v7H0z"/>
+    <circle cx="5" cy="1" r="1"/>
+    <path d="M4 1h2v7H4z"/>
+    <circle cx="9" cy="1" r="1"/>
+    <path d="M8 1h2v7H8zM3 14h4v20H3z"/>
+    <circle cx="5" cy="34" r="2"/>
+    <path d="M8 8a1 1 0 0 1-2 0H4a1 1 0 0 1-2 0H0c0 3.87 1 7 5 7s5-3.13 5-7H8z"/>
+    <circle cx="1" cy="8" r="1"/>
+    <circle cx="5" cy="8" r="1"/>
+    <circle cx="9" cy="8" r="1"/>
+  </g>
+  <g fill="#99AAB5" transform="matrix(5.55 0 0 5.55 100.23 100.25)">
+    <path d="M30 14h4v20h-4z"/>
+    <circle cx="32" cy="34" r="2"/>
+    <path d="M32 0c1 0 2 1 2 3v16s-7 2-7-8c0-6 3-11 5-11z"/>
+  </g>
+</svg>

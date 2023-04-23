@@ -1,17 +1,15 @@
-## ✨ Quick start
+# Ioana Orca - Portfolio
 
-1.  **Clone this repository.**
+## TODOs
+-[ ] recipes collection multiple ingredients lists
+-[ ] design colors
+-[ ] design font
+-[ ] home page teasers
+-[ ] analytics
+-[ ] contact form
+-[ ] og and twitter share
+-[ ] code collection
+-[ ] string collection
+-[ ] blog collection
 
-    ```sh
-    git clone https://github.com/IoanaOrca/portfolio.git
-    ```
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd portfolio/
-    npm i
-    npm run dev
-    ```

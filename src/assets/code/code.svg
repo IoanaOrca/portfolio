@@ -1,0 +1,16 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="gradient-0" x1="200" x2="200" y1="0" y2="400" gradientTransform="matrix(-1 -.04 0 -1 399.86 407.43)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8e9eab"/>
+      <stop offset="1" stop-color="#eef2f3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#gradient-0)"/>
+  <path fill="#CCD6DD" d="M300.02 222.22a22.22 22.22 0 0 1-22.22 22.22H122.24a22.2 22.2 0 0 1-22.22-22.22v-100A22.2 22.2 0 0 1 122.24 100H277.8a22.22 22.22 0 0 1 22.22 22.22v100Z"/>
+  <path fill="#5DADEC" d="M122.24 122.22H277.8v100H122.24v-100Z"/>
+  <path fill="#CCD6DD" d="M172.24 244.44h55.56v33.34h-55.56v-33.34Z"/>
+  <path fill="#9AAAB4" d="M172.24 244.44h55.56v11.12h-55.56v-11.12Z"/>
+  <path fill="#E1E8ED" d="M300.02 283.33c0-9.22-7.45-16.66-16.67-16.66H116.69c-12.84 0-20.84 13.89-14.45 25 3 5.16 8.5 8.33 14.45 8.33h166.66c9.22 0 16.67-7.44 16.67-16.67Z"/>
+  <path fill="#F5F8FA" d="M116.69 277.78h11.11v11.11h-11.11v-11.11Zm22.22 0h11.11v11.11h-11.11v-11.11Zm22.22 0h11.11v11.11h-11.11v-11.11Zm22.22 0h11.11v11.11h-11.11v-11.11Zm22.22 0h11.12v11.11h-11.12v-11.11Zm22.23 0h11.11v11.11H227.8v-11.11Zm22.22 0h11.11v11.11h-11.11v-11.11Zm22.22 0h11.11v11.11h-11.11v-11.11Z"/>
+</svg>

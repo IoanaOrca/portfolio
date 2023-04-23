@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'section'>;
+
+const { title, class: className, ...inputProps } = Astro.props;
+---
+
+<section {...inputProps} class={className}>
+  <div class="container my-16">
+    <slot />
+  </div>
+</section>

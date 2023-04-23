@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<div class="form-control w-fit">
+  <label class="label cursor-pointer gap-1">
+    <span class="sr-only">Toggle Colortheme</span>
+    <Icon name="HeroiconsSun" class="h-6 fill-current text-amber-600" />
+    <input type="checkbox" class="toggle" data-toggle-theme="orcadark,orcalight" data-key="orcatheme" />
+    <Icon name="HeroiconsMoon" class="h-5 fill-current text-slate-600" />
+  </label>
+</div>
+
+<script>
+  import { themeChange } from 'theme-change';
+  themeChange();
+
+  const isDark = localStorage.getItem('orcatheme') === 'orcadark';
+  if (isDark) {
+    const inputs = document.querySelectorAll('input[type="checkbox"][data-toggle-theme][data-key="orcatheme"]');
+    inputs.forEach(input => input.checked = true);
+  }
+</script>
+
+<style>
+.toggle {
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+}
+</style>
+

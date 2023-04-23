@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Quote from '@components/Quote.astro';
+import Section from '@components/Section.astro';
+import imgIoana from '@assets/ioana.jpeg';
+import bgPink from '@assets/pink.jpeg';
+import bgSky from '@assets/sky.jpeg';
+import bgHeart from '@assets/heart.jpg';
+
+const title = 'Home';
+---
+
+<BaseLayout title={ title }>
+  <header>
+    <div class="hero bg-secondary text-neutral">
+      <div class="hero-content flex-col lg:flex-row gap-8 px-8 pt-24 pb-16">
+        <div class="avatar">
+          <div class="w-56 rounded-full shadow-lg ring ring-primary ring-offset-secondary ring-offset-4">
+            <Image src={imgIoana} alt="Ioana" />
+          </div>
+        </div>
+        <div class="max-w-md flex flex-col gap-6">
+          <h1 class="text-5xl font-bold">Hey there!</h1>
+          <p class="">Nice to meet you! I’m Ioana, a creative programmer with divergent ideas and connective visions. I am passionate about web development, exploring new limits and always strive to enhance emotional intelligence in me and other people.</p>
+          <Icon name="HeroiconsArrowDown" class="h-12 w-12 text-primary animate-bounce" />
+        </div>
+      </div>
+    </div>
+    <style>
+      .drip-mask {
+        mask-image: url('drip-mask.svg');
+        mask-repeat: repeat-x;
+        mask-position: top center;
+      }
+    </style>
+    <hr class="transform -translate-y-1 border-none h-20 bg-secondary drip-mask" id="scroll-target"/>
+  </header>
+
+  <Section>
+    <div class="hero">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="mockup-window bg-base-300 shadow">
+          <video class="w-96" autoplay loop muted>
+            <source src="who-am-i.mp4" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video.</p>
+          </video>
+        </div>
+        <div class="flex flex-col gap-6">
+          <h2 class="text-4xl font-bold">Sometimes I code…</h2>
+          <!-- <p class="py-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+          <a class="btn btn-accent" href="/code">Check out my code</a>
+          <a class="btn btn-primary" href="/ioana-resume.pdf" target="_blank">My Resume</a>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgPink.src});`}>
+    <Quote
+      text="The road to success is always under construction"
+      author="Lily Tomlin"
+    />
+  </Section>
+
+  <Section>
+    <div class="prose mx-auto">
+      <h2>Sometimes I work with strings…</h2>
+      <a class="btn btn-accent" href="/strings">Get tangeld up</a>
+    </div>
+  </Section>
+
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgSky.src});`}>
+    <Quote
+      text="Life begins at the end of your comfort zone"
+      author="Neale Donald Walsch"
+    />
+  </Section>
+
+  <Section>
+    <div class="prose mx-auto">
+      <h2>Sometimes I cook…</h2>
+      <a class="btn btn-accent" href="/recipes">Get inspired</a>
+    </div>
+  </Section>
+
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgHeart.src});`}>
+    <Quote
+      text="Wherever you go, go with all your heart"
+      author="Confucius"
+    />
+  </Section>
+
+  <Section>
+    <div class="prose mx-auto">
+      <h2>Sometimes I write…</h2>
+      <a class="btn btn-accent" href="/blog">Get reading</a>
+    </div>
+  </Section>
+</BaseLayout>

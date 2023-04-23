@@ -1,0 +1,53 @@
+---
+import { Icon } from 'astro-icon';
+
+const socials = [
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/ioana.orka',
+    icon: 'Fa6BrandsFacebook',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/ioanaorka/?hl=en',
+    icon: 'Fa6BrandsInstagram',
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/ioana-iordache-6226006b/',
+    icon: 'Fa6BrandsLinkedin',
+  },
+  {
+    name: 'Github',
+    url: 'https://github.com/IoanaOrca',
+    icon: 'Fa6BrandsGithub',
+  },
+  {
+    name: 'Codepen',
+    url: 'https://codepen.io/IoanaOrka/',
+    icon: 'Fa6BrandsCodepen',
+  },
+];
+---
+
+<footer class="footer footer-center py-16 px-8 bg-neutral text-neutral-content mt-auto">
+  <div class="flex flex-wrap justify-center gap-4">
+    {
+      socials.map((social) => (
+        <a
+          class="btn btn-ghost btn-circle"
+          href={social.url}
+          title={ social.name }
+          target="_blank"
+          rel="noopener"
+        >
+          <Icon name={ social.icon } class="h-6 fill-current" />
+          <span class="sr-only">{ social.name }</span>
+        </a>
+      ))
+    }
+  </div>
+  <div>
+    <p>Made with ❤️ by IoanaOrca & MoritzBru</p>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  text: string;
+  author: string;
+}
+
+const { text, author } = Astro.props;
+---
+
+<figure class="px-8 py-28 max-w-prose mx-auto">
+  <blockquote class="text-2xl text-center font-serif">
+    <p>
+      <span class="inline-block transform scale-150 translate-y-1 opacity-50 select-none">“</span>
+      { text }
+      <span class="inline-block transform scale-150 translate-y-1 opacity-50 select-none">”</span>
+    </p>
+  </blockquote>
+  <figcaption class="font-thin text-lg italic text-right">—{ author }</figcaption>
+</figure>

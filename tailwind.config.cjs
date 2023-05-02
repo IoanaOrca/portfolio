@@ -13,11 +13,11 @@ module.exports = {
       {
         orcalight: {
           "color-scheme": "light",
-          "primary": "#fde047",
+          "primary": "#ffc107",
           "primary-content": "#ffffff",
-          "secondary": "#fca5a5",
+          "secondary": "#ea868f",
           "secondary-content": "#ffffff",
-          "accent": "#6ee7b7",
+          "accent": "#4dd4ac",
           "accent-content": "#163835",
           "neutral": "#3d4451",
           "neutral-content": "#ffffff",
@@ -40,11 +40,11 @@ module.exports = {
       {
         orcadark: {
           "color-scheme": "dark",
-          "primary": "#fde047",
+          "primary": "#ffc107",
           "primary-content": "#ffffff",
-          "secondary": "#fca5a5",
+          "secondary": "#ea868f",
           "secondary-content": "#ffffff",
-          "accent": "#6ee7b7",
+          "accent": "#4dd4ac",
           "accent-content": "#ffffff",
           "neutral": "#191D24",
           "neutral-focus": "#111318",

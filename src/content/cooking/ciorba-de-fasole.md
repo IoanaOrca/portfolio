@@ -8,52 +8,66 @@ image:
 tags: ['soup', 'ciorba']
 ingredients: [
   {
-    name: 'dry white beans',
-    quantity: '3 packs'
+    title: 'Soup',
+    list: [
+      {
+        name: 'dry white beans',
+        quantity: '3 packs'
+      },
+      {
+        name: 'large onion',
+        quantity: '1'
+      },
+      {
+        name: 'large carrot',
+        quantity: '1'
+      },
+      {
+        name: 'parsnip',
+        quantity: '1'
+      },
+      {
+        name: 'celery root',
+        quantity: '1'
+      },
+      {
+        name: 'red pepper',
+        quantity: '1'
+      },
+      {
+        name: 'sweet paprkia',
+        quantity: '1 tsp'
+      },
+      {
+        name: 'tomato paste',
+        quantity: '1 tbsp'
+      },
+      {
+        name: 'dried thyme',
+        quantity: '1 pinch'
+      },
+      {
+        name: 'salt',
+        quantity: '1 pinch'
+      },
+      {
+        name: 'olive oil',
+        quantity: '3 tbsp'
+      },
+    ],
   },
   {
-    name: 'large onion',
-    quantity: '1'
-  },
-  {
-    name: 'large carrot',
-    quantity: '1'
-  },
-  {
-    name: 'parsnip',
-    quantity: '1'
-  },
-  {
-    name: 'celery root',
-    quantity: '1'
-  },
-  {
-    name: 'red pepper',
-    quantity: '1'
-  },
-  {
-    name: 'sweet paprkia',
-    quantity: '1 tsp'
-  },
-  {
-    name: 'tomato paste',
-    quantity: '1 tbsp'
-  },
-  {
-    name: 'dried thyme',
-    quantity: '1 pinch'
-  },
-  {
-    name: 'salt',
-    quantity: '1 pinch'
-  },
-  {
-    name: 'olive oil',
-    quantity: '3 tbsp'
-  },
-  {
-    name: 'sour cream',
-    quantity: '1 can'
+    title: 'Topping',
+    list: [
+      {
+        name: 'Smantana',
+        quantity: '1 spoon'
+      },
+      {
+        name: 'Parsley',
+        quantity: 'a hand full'
+      },
+    ],
   },
 ]
 ---
@@ -73,6 +87,8 @@ ingredients: [
 - Close to the end of the boil add the dry thyme and as much salt as you like. Add 2-3 tbsp of vegetable oil and leave it boil for 2-3 more minutes, after the soup should be done.
 - To serve it you can add some chopped parsley on top as it just gives it a special nice taste.
 
-![image test](/src/assets/recipes/recipes.svg)
+![image test](/src/assets/cooking/cooking.svg)
+
+<progress value="80" max="100" >
 
 _Optionally_ you can top it up with smantana.

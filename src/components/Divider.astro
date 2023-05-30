@@ -1,0 +1,16 @@
+---
+const { class: className, ...inputProps } = Astro.props;
+---
+
+<div {...inputProps} class={className}></div>
+
+<style>
+  div {
+    --mask:
+        radial-gradient(calc(1.00em + 2px) at 50% calc(100% + 0.00em),#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) calc(50% - 2em) calc(50% - 0.5em - 2px + .5px)/4em calc(1em + 4px)  repeat-x,
+        radial-gradient(calc(1.00em + 2px) at 50% 0em,#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) 50% calc(50% + 0.5em + 2px)/4em calc(1em + 4px)  repeat-x;
+    mask: var(--mask);
+    height: 4em;
+    background-color: #000;
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import {svgPath} from 'blobs/v2';
+import { getId } from '@utils/id';
+
+const {
+  class: className,
+  imgSrc,
+  href,
+  text,
+  seed = Math.random(),
+  extraPoints = 8,
+  randomness = 4,
+  dur = '8s',
+  size = 256,
+} = Astro.props;
+
+const uuid = getId();
+
+const paths = [
+  svgPath({ seed: seed, extraPoints, randomness, size}),
+  svgPath({ seed: seed + 1, extraPoints, randomness, size}),
+  svgPath({ seed: seed + 2, extraPoints, randomness, size}),
+  svgPath({ seed: seed + 3, extraPoints, randomness, size}),
+  svgPath({ seed: seed, extraPoints, randomness, size}),
+];
+
+---
+
+<a href={href} class="group flex flex-col items-center no-underline focus-visible:outline-primary" class:list={[className]}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox={`0 0 ${size} ${size}`}
+    class="group-hover:scale-110 transition-transform duration-500"
+  >
+    <image
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      clip-path={`url(#${uuid})`}
+      href={imgSrc}
+      preserveAspectRatio="none meet"
+      class=""
+    />
+    <clipPath id={uuid}>
+      <path>
+        <animate
+          attributeName="d"
+          values={paths.join(';')}
+          dur={dur}
+          repeatCount="indefinite"
+        />
+      </path>
+    </clipPath>
+  </svg>
+
+  <span class="text-xl tracking-wider">{text}</span>
+</a>

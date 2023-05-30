@@ -1,8 +1,8 @@
 # Ioana Orca - Portfolio
 
 ## TODOs
-- [ ] recipes collection multiple ingredients lists
-- [ ] og and twitter share
+- [x] recipes collection multiple ingredients lists
+- [x] og and twitter share
 - [ ] design colors
 - [ ] design font
 - [ ] home page teasers

@@ -2,10 +2,11 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Section from '@components/Section.astro';
+import Divider from '@components/Divider.astro';
 const { data, slug } = Astro.props; // TODO typing
 
-const images = import.meta.glob<ImageMetadata>('/src/assets/recipes/*', { import: 'default' });
-const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg'}`]();
+const images = import.meta.glob<ImageMetadata>('/src/assets/cooking/*', { import: 'default' });
+const img = await images[`/src/assets/cooking/${data?.image?.src || 'cooking.svg'}`]();
 ---
 
 <BaseLayout title={data.title}>
@@ -13,7 +14,7 @@ const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg
     <div class="hero bg-base-200 text-base">
       <div class="hero-content flex-col lg:flex-row gap-8 px-8 py-16">
         <div class="avatar">
-          <div class="max-w-xs rounded shadow">
+          <div class="max-w-xs rounded-lg shadow-lg">
             <Image
               src={img.src}
               width={img.width}
@@ -31,13 +32,16 @@ const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg
   </header>
 
   <Section class="prose mx-auto">
-    <p>{ data.date.toLocaleDateString() }</p>
+
+    <time datetime={ data.date.toISOString() } class="font-light">
+      { data.date.toLocaleDateString() }
+    </time>
 
     {!!data.tags?.length &&
-      <ul class="flex flex-wrap gap-2">
+      <ul class="flex flex-wrap gap-2 pl-0">
         {
           data.tags.map(tag => (
-            <li class="badge badge-outline">
+            <li class="badge badge-accent">
               { tag }
             </li>
           ))
@@ -45,7 +49,10 @@ const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg
       </ul>
     }
 
-    {!!data.ingredients?.length &&
+    <h2 id="ingredients">Ingredients</h2>
+
+    {!!data.ingredients?.length && data.ingredients.map(ingredient => (
+      <h3 class="opacity-80">{ingredient.title}</h3>
       <div class="overflow-x-auto">
         <table class="table table-zebra w-full">
           <thead>
@@ -56,13 +63,13 @@ const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg
           </thead>
           <tbody>
             {
-              data.ingredients.map(ingredient => (
+              ingredient.list.map(item => (
                 <tr>
                   <td>
-                    { ingredient.name }
+                    { item.name }
                   </td>
                   <td>
-                    { ingredient.quantity }
+                    { item.quantity }
                   </td>
                 </tr>
               ))
@@ -70,9 +77,26 @@ const img = await images[`/src/assets/recipes/${data?.image?.src || 'recipes.svg
           </tbody>
         </table>
       </div>
-    }
+    ))}
 
     <slot />
 
   </Section>
 </BaseLayout>
+
+<!-- <style define:vars={{ bgImage: `url("${img.src}")` }}>
+  .hero-image {
+    position: relative;
+    overflow: visible !important;
+  }
+  .hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bgImage);
+    background-position: center center;
+    background-size: cover;
+    filter: blur(2em);
+    z-index: -1;
+  }
+</style> -->

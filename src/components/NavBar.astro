@@ -40,7 +40,7 @@ const links = [
         {
           links.map((link) => (
             <li>
-              <a class="btn btn-ghost btn-block" href={link.url}>
+              <a class="font-semibold uppercase" href={link.url}>
                 {link.label}
               </a>
             </li>
@@ -52,22 +52,22 @@ const links = [
     <ThemeToggle />
 
     {/* Mobile Menu */}
-    <div class="dropdown dropdown-end md:hidden">
-      <label tabindex="0" class="btn btn-ghost">
+    <details class="dropdown dropdown-end md:hidden">
+      <summary class="btn btn-ghost">
         <Icon name="HeroiconsBars3CenterLeft" class="h-7 fill-current scale-x-[-1]" />
         <span class="sr-only">Menu</span>
-      </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box">
+      </summary>
+      <ul class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box">
         {
           links.map((link) => (
             <li>
-              <a class="btn btn-ghost" href={link.url}>
+              <a class="font-semibold uppercase" href={link.url}>
                 {link.label}
               </a>
             </li>
           ))
         }
       </ul>
-    </div>
+    </details>
   </div>
 </nav>

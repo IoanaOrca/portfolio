@@ -51,7 +51,7 @@ const img = await images[`/src/assets/cooking/${data?.image?.src || 'cooking.svg
     {!!data.ingredients?.length && data.ingredients.map(ingredient => (
       <h3 class="opacity-80">{ingredient.title}</h3>
       <div class="overflow-x-auto">
-        <table class="table table-zebra w-full">
+        <table class="table table-zebra">
           <thead>
             <tr>
               <th>Ingredient</th>

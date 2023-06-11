@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { Icon } from 'astro-icon';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Quote from '@components/Quote.astro';
@@ -58,7 +58,10 @@ const title = 'Home';
           <!-- <h2 class="text-4xl font-bold">Sometimes I code…</h2> -->
           <!-- <p class="py-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
           <h1 class="text-5xl font-bold">Hey there!</h1>
-          <p class="max-w-prose">Nice to meet you! I’m Ioana, a creative programmer with divergent ideas and connective visions. I am passionate about web development, exploring new limits and always strive to enhance emotional intelligence in me and other people.</p>
+          <p class="max-w-prose">
+            Nice to meet you! I’m Ioana, a creative programmer with divergent ideas and connective visions.
+            I am passionate about web development, exploring new limits and always strive to enhance emotional intelligence in me and other people.
+          </p>
           <!-- <Icon name="HeroiconsArrowDown" class="h-12 w-12 text-primary animate-bounce" /> -->
           <!-- <a class="btn btn-accent" href="/code">Check out my code</a>
           <a class="btn btn-primary" href="/ioana-resume.pdf" target="_blank">My Resume</a> -->
@@ -73,7 +76,7 @@ const title = 'Home';
     </div>
   </Section>
 
-  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgPink.src});`}>
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" bgImage={bgPink}>
     <Quote
       text="The road to success is always under construction"
       author="Lily Tomlin"
@@ -84,22 +87,22 @@ const title = 'Home';
     <div class="px-4 mx-auto">
       <h2>Sometimes I…</h2>
       <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <Blob imgSrc={bgPink.src} text="code" href="/coding" />
-        <Blob imgSrc={bgSky.src} text="string" href="/crafting" />
-        <Blob imgSrc={bgHeart.src} text="write" href="/blog" />
-        <Blob imgSrc={imgIoana.src} text="cook" href="/cooking" />
+        <Blob imgPath={bgPink} text="code" href="/coding" />
+        <Blob imgPath={bgSky} text="string" href="/crafting" />
+        <Blob imgPath={bgHeart} text="write" href="/blog" />
+        <Blob imgPath={imgIoana} text="cook" href="/cooking" />
       </div>
     </div>
   </Section>
 
-  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgSky.src});`}>
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" bgImage={bgSky}>
     <Quote
       text="Life begins at the end of your comfort zone"
       author="Neale Donald Walsch"
     />
   </Section>
 
-  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" style={`background-image: url(${bgHeart.src});`}>
+  <Section class="bg-cover bg-fixed bg-gray-400 dark:bg-gray-600 bg-blend-multiply text-neutral-content" bgImage={bgHeart}>
     <Quote
       text="Wherever you go, go with all your heart"
       author="Confucius"

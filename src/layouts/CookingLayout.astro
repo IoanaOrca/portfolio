@@ -2,8 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Section from '@components/Section.astro';
-import Divider from '@components/Divider.astro';
-const { data, slug } = Astro.props; // TODO typing
+const { data } = Astro.props; // TODO typing
 
 const images = import.meta.glob<ImageMetadata>('/src/assets/cooking/*', { import: 'default' });
 const img = await images[`/src/assets/cooking/${data?.image?.src || 'cooking.svg'}`]();
@@ -16,9 +15,7 @@ const img = await images[`/src/assets/cooking/${data?.image?.src || 'cooking.svg
         <div class="avatar">
           <div class="max-w-xs rounded-lg shadow-lg">
             <Image
-              src={img.src}
-              width={img.width}
-              height={img.height}
+              src={img}
               alt={data?.image?.alt || ''}
             />
           </div>

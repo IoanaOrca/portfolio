@@ -8,7 +8,6 @@ const title = 'Crafting';
 
 const allEntries = await getCollection('crafting');
 const images = import.meta.glob<ImageMetadata>('/src/assets/crafting/*', { import: 'default' });
-console.log(images);
 ---
 
 <BaseLayout title={ title }>
@@ -21,7 +20,7 @@ console.log(images);
             title={entry.data.title}
             description={entry.data.description}
             link={`/crafting/${entry.slug}`}
-            image={await images[`/src/assets/crafting/${entry.data?.image?.src || 'crafting.svg'}`]()}
+            image={await images[`/src/assets/crafting/${entry.data?.image?.src}`]()}
             imageAlt={entry.data.image?.alt}
           />
         ))
@@ -29,6 +28,3 @@ console.log(images);
     </div>
   </Section>
 </BaseLayout>
-
-<style>
-</style>

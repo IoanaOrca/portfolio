@@ -1,12 +1,21 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-type Props = HTMLAttributes<'section'>;
+import { getImage } from 'astro:assets';
+const { title, bgImage, class: className, ...inputProps} = Astro.props;
 
-const { title, class: className, ...inputProps } = Astro.props;
+const backgroundImage = !!bgImage ? await getImage({ src: bgImage }) : null;
 ---
 
-<section {...inputProps} class={className}>
+<section
+  {...inputProps}
+  class:list={[ className, { hasBackground: !!bgImage } ]}
+>
   <div class="container my-16">
     <slot />
   </div>
 </section>
+
+<style define:vars={{ backgroundImageUrl: `url("${backgroundImage?.src}")` }}>
+  .hasBackground {
+    background-image: var(--backgroundImageUrl);
+  }
+</style>

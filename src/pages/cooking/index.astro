@@ -20,7 +20,7 @@ const images = import.meta.glob<ImageMetadata>('/src/assets/cooking/*', { import
             title={entry.data.title}
             description={entry.data.description}
             link={`/cooking/${entry.slug}`}
-            image={await images[`/src/assets/cooking/${entry.data?.image?.src || 'cooking.svg'}`]()}
+            image={await images[`/src/assets/cooking/${entry.data?.image?.src}`]?.()}
             imageAlt={entry.data.image?.alt}
           />
         ))

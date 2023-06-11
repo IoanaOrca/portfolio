@@ -15,7 +15,7 @@ const Element = link ? 'a' : 'div';
 ---
 
 <Element class="card bg-base-100 shadow image-full hover:scale-105 transition-transform" href={link}>
-  {image && <figure><Image src={image.src} width={image.width} height={image.height} alt={imageAlt || ''} /></figure>}
+  {image && <figure><Image src={image} alt={imageAlt || ''} /></figure>}
   <div class="card-body">
     {title && <h2 class="card-title">{title}</h2>}
     {description && <p>{description}</p>}
